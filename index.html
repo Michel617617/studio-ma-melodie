@@ -6,7 +6,7 @@
 
   <title>MA MÉLODIE — Studio El Bajero</title>
 
-  <meta name="theme-color" content="#071426">
+  <meta name="theme-color" content="#06152f">
 
   <style>
     * {
@@ -17,208 +17,261 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #050b16;
+      background: #020817;
       color: #ffffff;
-      min-height: 100vh;
+      line-height: 1.6;
     }
 
+    .container {
+      width: 92%;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    /* HEADER */
     header {
-      background: linear-gradient(135deg, #071426, #102b4f);
-      padding: 25px 20px;
+      background:
+        radial-gradient(circle at top, #17345f 0%, #071a38 45%, #020817 100%);
       text-align: center;
-      border-bottom: 1px solid #c9a227;
+      padding: 25px 15px 35px;
+      border-bottom: 2px solid #d9ad3c;
     }
 
     .logo {
-      width: 75px;
-      height: 75px;
-      margin: auto;
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
       border-radius: 50%;
-      background: linear-gradient(135deg, #d4af37, #f5d76e);
-      color: #071426;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 25px;
-      box-shadow: 0 0 25px rgba(212,175,55,.35);
+      display: block;
+      margin: 0 auto 15px;
+      box-shadow: 0 0 30px rgba(218, 174, 55, 0.35);
     }
 
-    h1 {
-      margin-top: 15px;
-      color: #f5d76e;
-      font-size: 29px;
+    header h1 {
+      color: #f4ca55;
+      font-size: 32px;
       letter-spacing: 2px;
+      margin-bottom: 5px;
     }
 
-    .subtitle {
-      margin-top: 7px;
-      color: #d7dde7;
-      font-size: 14px;
+    header p {
+      color: #dbe3f0;
+      font-size: 16px;
     }
 
-    main {
-      max-width: 650px;
-      margin: auto;
-      padding: 20px;
-    }
-
+    /* HERO */
     .hero {
-      background: linear-gradient(145deg, #0c1b31, #07101f);
-      border: 1px solid #9f7d1f;
-      border-radius: 20px;
-      padding: 25px;
-      margin-bottom: 20px;
+      margin: 25px 0;
+      padding: 30px 22px;
+      border: 1px solid #c79c2e;
+      border-radius: 22px;
+      background: linear-gradient(145deg, #0b1d3a, #061225);
       text-align: center;
-      box-shadow: 0 12px 35px rgba(0,0,0,.35);
+    }
+
+    .hero .music-icon {
+      font-size: 48px;
+      margin-bottom: 8px;
     }
 
     .hero h2 {
-      color: #f5d76e;
+      color: #f4ca55;
+      font-size: 28px;
       margin-bottom: 12px;
-      font-size: 24px;
     }
 
     .hero p {
-      color: #c8d0dc;
-      line-height: 1.6;
-      font-size: 15px;
+      color: #dce4ef;
+      font-size: 16px;
     }
 
-    .section {
-      background: #0b1729;
-      border: 1px solid #263a55;
-      border-radius: 18px;
-      padding: 20px;
+    /* FORM */
+    .form-card {
+      background: #09172c;
+      border: 1px solid #243c61;
+      border-radius: 22px;
+      padding: 25px 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+    }
+
+    .form-card h2 {
+      color: #f4ca55;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .field {
       margin-bottom: 18px;
-    }
-
-    .section-title {
-      color: #f5d76e;
-      font-size: 19px;
-      margin-bottom: 17px;
     }
 
     label {
       display: block;
-      margin: 15px 0 7px;
-      color: #dfe5ee;
-      font-size: 14px;
       font-weight: bold;
+      margin-bottom: 7px;
+      color: #ffffff;
     }
 
     input,
-    textarea,
-    select {
+    select,
+    textarea {
       width: 100%;
       padding: 14px;
       border-radius: 12px;
-      border: 1px solid #38506f;
-      background: #071120;
+      border: 1px solid #385579;
+      background: #050e1e;
       color: #ffffff;
-      font-size: 15px;
+      font-size: 16px;
       outline: none;
     }
 
     input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: #d4af37;
-      box-shadow: 0 0 0 2px rgba(212,175,55,.12);
+    select:focus,
+    textarea:focus {
+      border-color: #e6bb43;
+      box-shadow: 0 0 0 2px rgba(230,187,67,0.12);
     }
 
     textarea {
-      min-height: 120px;
+      min-height: 150px;
       resize: vertical;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
+    select option {
+      background: #071225;
+      color: white;
     }
 
-    button {
+    /* RADIO */
+    .radio-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .radio-option {
+      border: 1px solid #385579;
+      border-radius: 12px;
+      padding: 12px;
+      background: #050e1e;
+    }
+
+    .radio-option label {
+      margin: 0;
+      font-weight: normal;
+      cursor: pointer;
+    }
+
+    .radio-option input {
+      width: auto;
+      margin-right: 7px;
+    }
+
+    /* BUTTON */
+    .main-button {
       width: 100%;
-      padding: 15px;
+      padding: 16px;
       border: none;
-      border-radius: 13px;
-      font-size: 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #f3c94f, #b98519);
+      color: #071225;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .main-button:active {
+      transform: scale(0.98);
+    }
+
+    .whatsapp-button {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 14px;
+      background: #1fb45a;
+      color: white;
+      font-size: 18px;
       font-weight: bold;
       cursor: pointer;
       margin-top: 12px;
     }
 
-    .gold-btn {
-      background: linear-gradient(135deg, #c99b2e, #f5d76e);
-      color: #071426;
-      box-shadow: 0 8px 20px rgba(212,175,55,.20);
-    }
-
-    .dark-btn {
-      background: #13243a;
-      border: 1px solid #c9a227;
-      color: #f5d76e;
-    }
-
-    .whatsapp-btn {
-      background: #1db954;
-      color: white;
-    }
-
-    .result {
+    /* RESULT */
+    #resultat {
       display: none;
-      background: #071426;
-      border: 1px solid #d4af37;
-      border-radius: 16px;
-      padding: 18px;
-      margin-top: 18px;
+      background: #071a2c;
+      border: 1px solid #d9ad3c;
+      border-radius: 18px;
+      padding: 20px;
+      margin-top: 20px;
     }
 
-    .result h3 {
-      color: #f5d76e;
+    #resultat h3 {
+      color: #f4ca55;
       margin-bottom: 12px;
     }
 
-    .result p {
-      color: #d7dde7;
-      line-height: 1.7;
-      font-size: 14px;
-      margin-bottom: 7px;
+    #resume {
+      white-space: pre-line;
+      color: #dce4ef;
+      font-size: 15px;
     }
 
-    .ai-status {
-      margin-top: 15px;
-      padding: 12px;
-      border-radius: 10px;
-      background: #101f34;
-      color: #bfc9d8;
-      font-size: 13px;
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .service {
+      padding: 18px 10px;
       text-align: center;
+      background: #09172c;
+      border: 1px solid #263e61;
+      border-radius: 15px;
     }
 
+    .service strong {
+      display: block;
+      color: #f4ca55;
+      margin-bottom: 5px;
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 25px 15px;
-      color: #8996a8;
-      font-size: 12px;
+      padding: 30px 15px;
+      border-top: 1px solid #243653;
+      color: #9daac0;
+      margin-top: 30px;
     }
 
     footer strong {
-      color: #f5d76e;
+      color: #f4ca55;
     }
 
-    @media (max-width: 500px) {
-      .grid {
+    @media (max-width: 600px) {
+
+      header h1 {
+        font-size: 27px;
+      }
+
+      .logo {
+        width: 125px;
+        height: 125px;
+      }
+
+      .hero h2 {
+        font-size: 24px;
+      }
+
+      .radio-group,
+      .services {
         grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 25px;
-      }
-
-      main {
-        padding: 14px;
       }
     }
   </style>
@@ -226,53 +279,538 @@
 
 <body>
 
-<header>
+  <!-- HEADER -->
+  <header>
 
-  <div class="logo">MM</div>
+    <!-- TON LOGO -->
+    <img src="logo.png"
+         alt="Logo Studio Ma Mélodie"
+         class="logo">
 
-  <h1>MA MÉLODIE</h1>
-
-  <div class="subtitle">
-    Studio El Bajero • Création musicale personnalisée
-  </div>
-
-</header>
-
-
-<main>
-
-  <div class="hero">
-
-    <h2>🎵 Crée ta chanson personnalisée</h2>
+    <h1>MA MÉLODIE</h1>
 
     <p>
-      Transforme ton histoire, tes émotions et tes paroles
-      en un projet musical personnalisé.
+      Studio El Bajero • Création musicale personnalisée
     </p>
 
-  </div>
+  </header>
 
 
-  <div class="section">
+  <main class="container">
 
-    <div class="section-title">
-      ✍️ Informations de la chanson
-    </div>
+    <!-- HERO -->
+    <section class="hero">
 
-    <label for="nom">
-      Nom du client
-    </label>
+      <div class="music-icon">🎵</div>
 
-    <input
-      id="nom"
-      type="text"
-      placeholder="Ex : Michel"
-    >
+      <h2>Crée ta chanson personnalisée</h2>
+
+      <p>
+        Transforme ton histoire, tes émotions et tes idées
+        en une chanson unique avec MA MÉLODIE.
+      </p>
+
+    </section>
 
 
-    <label for="destinataire">
-      Chanson destinée à
-    </label>
+    <!-- FORMULAIRE -->
+    <section class="form-card">
 
-    <input
-      id
+      <h2>✍️ Informations de la chanson</h2>
+
+      <form id="songForm">
+
+        <!-- NOM CLIENT -->
+        <div class="field">
+
+          <label for="client">
+            Nom du client
+          </label>
+
+          <input
+            type="text"
+            id="client"
+            placeholder="Ex : Michel"
+            required
+          >
+
+        </div>
+
+
+        <!-- DESTINATAIRE -->
+        <div class="field">
+
+          <label for="destinataire">
+            ❤️ Chanson destinée à
+          </label>
+
+          <input
+            type="text"
+            id="destinataire"
+            placeholder="Ex : Ma femme Djoulia"
+            required
+          >
+
+        </div>
+
+
+        <!-- OCCASION -->
+        <div class="field">
+
+          <label for="occasion">
+            🎉 Occasion
+          </label>
+
+          <select id="occasion" required>
+
+            <option value="">
+              Choisir une occasion
+            </option>
+
+            <option>
+              Anniversaire
+            </option>
+
+            <option>
+              Mariage
+            </option>
+
+            <option>
+              Déclaration d'amour
+            </option>
+
+            <option>
+              Saint-Valentin
+            </option>
+
+            <option>
+              Naissance
+            </option>
+
+            <option>
+              Hommage
+            </option>
+
+            <option>
+              Réconciliation
+            </option>
+
+            <option>
+              Motivation
+            </option>
+
+            <option>
+              Autre
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- STYLE -->
+        <div class="field">
+
+          <label for="style">
+            🎼 Style musical
+          </label>
+
+          <select id="style" required>
+
+            <option value="">
+              Choisir un style
+            </option>
+
+            <option>
+              Rumba congolaise moderne
+            </option>
+
+            <option>
+              Rumba urbaine
+            </option>
+
+            <option>
+              Afrobeat
+            </option>
+
+            <option>
+              Afropop
+            </option>
+
+            <option>
+              Gospel
+            </option>
+
+            <option>
+              Slow / Ballade
+            </option>
+
+            <option>
+              Rap
+            </option>
+
+            <option>
+              Amapiano
+            </option>
+
+            <option>
+              Musique traditionnelle
+            </option>
+
+            <option>
+              Autre
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- VOIX -->
+        <div class="field">
+
+          <label>
+            🎤 Type de voix
+          </label>
+
+          <div class="radio-group">
+
+            <div class="radio-option">
+
+              <label>
+                <input
+                  type="radio"
+                  name="voix"
+                  value="Voix masculine"
+                  checked
+                >
+
+                Voix masculine
+              </label>
+
+            </div>
+
+            <div class="radio-option">
+
+              <label>
+                <input
+                  type="radio"
+                  name="voix"
+                  value="Voix féminine"
+                >
+
+                Voix féminine
+              </label>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- LANGUE -->
+        <div class="field">
+
+          <label for="langue">
+            🌍 Langue
+          </label>
+
+          <select id="langue">
+
+            <option>
+              Français
+            </option>
+
+            <option>
+              Français + Lingala
+            </option>
+
+            <option>
+              Lingala
+            </option>
+
+            <option>
+              Français + Anglais
+            </option>
+
+            <option>
+              Autre
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- HUMEUR -->
+        <div class="field">
+
+          <label for="emotion">
+            ❤️ Ambiance / émotion
+          </label>
+
+          <select id="emotion">
+
+            <option>
+              Très émouvante
+            </option>
+
+            <option>
+              Romantique
+            </option>
+
+            <option>
+              Joyeuse
+            </option>
+
+            <option>
+              Triste
+            </option>
+
+            <option>
+              Motivante
+            </option>
+
+            <option>
+              Festive
+            </option>
+
+            <option>
+              Spirituelle
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- HISTOIRE -->
+        <div class="field">
+
+          <label for="histoire">
+            📝 Raconte-nous ton histoire
+          </label>
+
+          <textarea
+            id="histoire"
+            placeholder="Écris ici les informations importantes : noms, histoire d'amour, événement, message à transmettre, souvenirs, etc."
+            required
+          ></textarea>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+        <div class="field">
+
+          <label for="message">
+            💬 Message particulier à mettre dans la chanson
+          </label>
+
+          <textarea
+            id="message"
+            placeholder="Ex : Je t'aime pour toujours. Merci pour tout ce que tu fais pour moi..."
+          ></textarea>
+
+        </div>
+
+
+        <!-- BOUTON -->
+        <button
+          type="submit"
+          class="main-button"
+        >
+          🤖 Préparer ma chanson avec IA
+        </button>
+
+      </form>
+
+
+      <!-- RESULTAT -->
+      <div id="resultat">
+
+        <h3>
+          🎵 Projet musical préparé
+        </h3>
+
+        <div id="resume"></div>
+
+        <button
+          class="whatsapp-button"
+          onclick="envoyerWhatsApp()"
+        >
+          📱 Envoyer la commande sur WhatsApp
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section>
+
+      <div class="services">
+
+        <div class="service">
+          <strong>🎵 Chanson</strong>
+          Personnalisée
+        </div>
+
+        <div class="service">
+          <strong>🎙️ Studio</strong>
+          Production
+        </div>
+
+        <div class="service">
+          <strong>🎬 Vidéo</strong>
+          Montage vidéo
+        </div>
+
+        <div class="service">
+          <strong>🎨 Design</strong>
+          Affiches professionnelles
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>MA MÉLODIE</strong>
+    </p>
+
+    <p>
+      Studio El Bajero
+    </p>
+
+    <p>
+      Création musicale personnalisée
+    </p>
+
+    <p>
+      WhatsApp : +243 825 520 677
+    </p>
+
+  </footer>
+
+
+  <script>
+
+    let commandeWhatsApp = "";
+
+
+    document
+      .getElementById("songForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const client =
+          document.getElementById("client").value;
+
+        const destinataire =
+          document.getElementById("destinataire").value;
+
+        const occasion =
+          document.getElementById("occasion").value;
+
+        const style =
+          document.getElementById("style").value;
+
+        const langue =
+          document.getElementById("langue").value;
+
+        const emotion =
+          document.getElementById("emotion").value;
+
+        const histoire =
+          document.getElementById("histoire").value;
+
+        const message =
+          document.getElementById("message").value;
+
+
+        const voix =
+          document.querySelector(
+            'input[name="voix"]:checked'
+          ).value;
+
+
+        commandeWhatsApp =
+`🎵 NOUVELLE COMMANDE — MA MÉLODIE
+
+👤 Client : ${client}
+
+❤️ Chanson destinée à :
+${destinataire}
+
+🎉 Occasion :
+${occasion}
+
+🎼 Style musical :
+${style}
+
+🎤 Voix :
+${voix}
+
+🌍 Langue :
+${langue}
+
+❤️ Ambiance :
+${emotion}
+
+📝 Histoire :
+${histoire}
+
+💬 Message particulier :
+${message}
+
+🎙️ Studio El Bajero
+MA MÉLODIE`;
+
+
+        document.getElementById("resume").textContent =
+          commandeWhatsApp;
+
+
+        document.getElementById("resultat").style.display =
+          "block";
+
+
+        document
+          .getElementById("resultat")
+          .scrollIntoView({
+            behavior: "smooth"
+          });
+
+      });
+
+
+    function envoyerWhatsApp() {
+
+      const numero =
+        "243825520677";
+
+      const url =
+        "https://wa.me/" +
+        numero +
+        "?text=" +
+        encodeURIComponent(commandeWhatsApp);
+
+      window.open(url, "_blank");
+
+    }
+
+  </script>
+
+</body>
+</html>
