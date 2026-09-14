@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MA MÉLODIE — Studio El Bajero</title>
+
+  <meta name="theme-color" content="#071426">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050b16;
+      color: #ffffff;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #071426, #102b4f);
+      padding: 25px 20px;
+      text-align: center;
+      border-bottom: 1px solid #c9a227;
+    }
+
+    .logo {
+      width: 75px;
+      height: 75px;
+      margin: auto;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d4af37, #f5d76e);
+      color: #071426;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 25px;
+      box-shadow: 0 0 25px rgba(212,175,55,.35);
+    }
+
+    h1 {
+      margin-top: 15px;
+      color: #f5d76e;
+      font-size: 29px;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      margin-top: 7px;
+      color: #d7dde7;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 650px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .hero {
+      background: linear-gradient(145deg, #0c1b31, #07101f);
+      border: 1px solid #9f7d1f;
+      border-radius: 20px;
+      padding: 25px;
+      margin-bottom: 20px;
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(0,0,0,.35);
+    }
+
+    .hero h2 {
+      color: #f5d76e;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    .hero p {
+      color: #c8d0dc;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .section {
+      background: #0b1729;
+      border: 1px solid #263a55;
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      color: #f5d76e;
+      font-size: 19px;
+      margin-bottom: 17px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 7px;
+      color: #dfe5ee;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid #38506f;
+      background: #071120;
+      color: #ffffff;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #d4af37;
+      box-shadow: 0 0 0 2px rgba(212,175,55,.12);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 13px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+
+    .gold-btn {
+      background: linear-gradient(135deg, #c99b2e, #f5d76e);
+      color: #071426;
+      box-shadow: 0 8px 20px rgba(212,175,55,.20);
+    }
+
+    .dark-btn {
+      background: #13243a;
+      border: 1px solid #c9a227;
+      color: #f5d76e;
+    }
+
+    .whatsapp-btn {
+      background: #1db954;
+      color: white;
+    }
+
+    .result {
+      display: none;
+      background: #071426;
+      border: 1px solid #d4af37;
+      border-radius: 16px;
+      padding: 18px;
+      margin-top: 18px;
+    }
+
+    .result h3 {
+      color: #f5d76e;
+      margin-bottom: 12px;
+    }
+
+    .result p {
+      color: #d7dde7;
+      line-height: 1.7;
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    .ai-status {
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 10px;
+      background: #101f34;
+      color: #bfc9d8;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      color: #8996a8;
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: #f5d76e;
+    }
+
+    @media (max-width: 500px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+
+      main {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">MM</div>
+
+  <h1>MA MÉLODIE</h1>
+
+  <div class="subtitle">
+    Studio El Bajero • Création musicale personnalisée
+  </div>
+
+</header>
+
+
+<main>
+
+  <div class="hero">
+
+    <h2>🎵 Crée ta chanson personnalisée</h2>
+
+    <p>
+      Transforme ton histoire, tes émotions et tes paroles
+      en un projet musical personnalisé.
+    </p>
+
+  </div>
+
+
+  <div class="section">
+
+    <div class="section-title">
+      ✍️ Informations de la chanson
+    </div>
+
+    <label for="nom">
+      Nom du client
+    </label>
+
+    <input
+      id="nom"
+      type="text"
+      placeholder="Ex : Michel"
+    >
+
+
+    <label for="destinataire">
+      Chanson destinée à
+    </label>
+
+    <input
+      id
